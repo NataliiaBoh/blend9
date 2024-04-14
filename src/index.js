@@ -3,8 +3,10 @@ import './styles/index.css';
 
 import { refs } from './js/refs';
 import { getAllProducts } from './requests/products';
+import { onCreateProductFormSubmit } from './js/onCreatePruductFormSubmit';
 
-renderProducts();
+// renderProducts();
+refs.createProductForm.addEventListener('submit', onCreateProductFormSubmit);
 
 async function renderProducts() {
   try {
